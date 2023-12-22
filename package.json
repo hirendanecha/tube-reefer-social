@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run tube-reefer-social:dev-serve-ssr",
-    "serve:ssr": "node dist-video/tube-reefer-social/server/main.js",
+    "serve:ssr": "node tube-dist/tube-reefer-social/server/main.js",
     "build:ssr": "ng build && ng run tube-reefer-social:server",
     "prerender": "ng run tube-reefer-social:prerender"
   },
