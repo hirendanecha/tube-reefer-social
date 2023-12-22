@@ -82,9 +82,9 @@ export function app(): express.Express {
           description:
             'The Umbrella platform for All freedom based projects worldwide',
           image:
-            'https://video.healing.tube/assets/banner/Healing-Tube-Logo.jpg',
-          site: 'https://video.healing.tube/',
-          url: 'https://video.healing.tube' + params,
+            'https://tube.reefer.social/assets/reefer-default-banner-and-logo.png',
+          site: 'https://tube.reefer.social/',
+          url: 'https://tube.reefer.social' + params,
           keywords: 'ReeferTube',
         };
         if (
@@ -128,7 +128,7 @@ export function app(): express.Express {
           const talent = {
             name: post?.title || post?.albumname || 'ReeferTube Post',
             description: pdhtml?.textContent || 'Post content',
-            image: post?.thumbfilename || post?.metaimage || post?.imageUrl,
+            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://tube.reefer.social/assets/reefer-default-banner-and-logo.png',
           };
           seo.title = talent.name;
           seo.description = strip_html_tags(talent.description);
