@@ -80,7 +80,7 @@ export function app(): express.Express {
         var seo: any = {
           title: 'ReeferTube',
           description:
-            'The Umbrella platform for All freedom based projects worldwide',
+            'Social Reefer discussions with optional video conferencing. Dispensaries and Farmers promote cannabis products.',
           image:
             'https://tube.reefer.social/assets/reefer-default-banner-and-logo-1.png',
           site: 'https://tube.reefer.social/',
