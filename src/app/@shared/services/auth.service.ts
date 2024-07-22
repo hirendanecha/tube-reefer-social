@@ -29,7 +29,7 @@ export class AuthService {
     // this.admin = new BehaviorSubject<any>(adminJson);
     const userJson = localStorage.getItem('authUser') ? JSON.parse(localStorage.getItem('authUser') as any) : {};
     this.user = new BehaviorSubject<any>(userJson);
-    // this.token = new BehaviorSubject<any>(this.cookieService.get('token') ? this.cookieService.get('token') : '');
+    // this.token = new BehaviorSubject<any>(this.cookieService.get('auth-token') ? this.cookieService.get('auth-token') : '');
   }
 
   adminData(): any {
@@ -44,7 +44,7 @@ export class AuthService {
   // adminLogin(adminJson: any = {}): Observable<any> {
   //     localStorage.clear();
   //     localStorage.setItem('adminAuth', JSON.stringify(adminJson));
-  //     localStorage.setItem('token', adminJson?.token);
+  //     localStorage.setItem('auth-token', adminJson?.token);
 
   //     if (!!adminJson) {
   //         this.admin.next(adminJson);
@@ -106,7 +106,7 @@ export class AuthService {
   }
 
   setToken(token: string = ''): void {
-    localStorage.setItem('token', token);
+    localStorage.setItem('auth-token', token);
     this.token?.next(token);
   }
 
